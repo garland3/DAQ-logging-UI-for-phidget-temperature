@@ -33,13 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tempTxt = new System.Windows.Forms.TextBox();
             this.thermocoupletypeCombo = new System.Windows.Forms.ComboBox();
-            this.additionalSettings = new System.Windows.Forms.FlowLayoutPanel();
-            this.thermocouplePanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.rtdTypePanel = new System.Windows.Forms.Panel();
             this.rtdTypeCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rtdWireSetupPanel = new System.Windows.Forms.Panel();
             this.rtdWireSetupCombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.settingsBox = new System.Windows.Forms.GroupBox();
@@ -49,16 +45,16 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.phidgetInfoBox1 = new Phidget22.ExampleUtils.PhidgetInfoBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataIntervalTrk = new PhidgetsControlLibrary.CustomScroll();
             this.changeTriggerTrk = new PhidgetsControlLibrary.CustomScroll();
-            this.button4 = new System.Windows.Forms.Button();
+            this.phidgetInfoBox1 = new Phidget22.ExampleUtils.PhidgetInfoBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.outputBox.SuspendLayout();
-            this.additionalSettings.SuspendLayout();
-            this.thermocouplePanel.SuspendLayout();
-            this.rtdTypePanel.SuspendLayout();
-            this.rtdWireSetupPanel.SuspendLayout();
             this.settingsBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputBox
@@ -66,9 +62,9 @@
             this.outputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.outputBox.Controls.Add(this.label3);
             this.outputBox.Controls.Add(this.tempTxt);
-            this.outputBox.Location = new System.Drawing.Point(305, 102);
+            this.outputBox.Location = new System.Drawing.Point(329, 15);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(200, 99);
+            this.outputBox.Size = new System.Drawing.Size(176, 39);
             this.outputBox.TabIndex = 98;
             this.outputBox.TabStop = false;
             this.outputBox.Text = "Data";
@@ -77,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 44);
+            this.label3.Location = new System.Drawing.Point(6, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 1;
@@ -86,7 +82,7 @@
             // tempTxt
             // 
             this.tempTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tempTxt.Location = new System.Drawing.Point(110, 44);
+            this.tempTxt.Location = new System.Drawing.Point(82, 16);
             this.tempTxt.Name = "tempTxt";
             this.tempTxt.ReadOnly = true;
             this.tempTxt.Size = new System.Drawing.Size(75, 13);
@@ -99,62 +95,29 @@
             this.thermocoupletypeCombo.DisplayMember = "Value";
             this.thermocoupletypeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.thermocoupletypeCombo.FormattingEnabled = true;
-            this.thermocoupletypeCombo.Location = new System.Drawing.Point(108, 1);
+            this.thermocoupletypeCombo.Location = new System.Drawing.Point(116, 19);
             this.thermocoupletypeCombo.Name = "thermocoupletypeCombo";
             this.thermocoupletypeCombo.Size = new System.Drawing.Size(148, 21);
             this.thermocoupletypeCombo.TabIndex = 0;
             this.thermocoupletypeCombo.ValueMember = "Key";
             this.thermocoupletypeCombo.SelectedIndexChanged += new System.EventHandler(this.thermocoupletypeCombo_SelectedIndexChanged);
             // 
-            // additionalSettings
-            // 
-            this.additionalSettings.AutoSize = true;
-            this.additionalSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.additionalSettings.Controls.Add(this.thermocouplePanel);
-            this.additionalSettings.Controls.Add(this.rtdTypePanel);
-            this.additionalSettings.Controls.Add(this.rtdWireSetupPanel);
-            this.additionalSettings.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.additionalSettings.Location = new System.Drawing.Point(6, 19);
-            this.additionalSettings.Name = "additionalSettings";
-            this.additionalSettings.Size = new System.Drawing.Size(262, 90);
-            this.additionalSettings.TabIndex = 105;
-            this.additionalSettings.Visible = false;
-            // 
-            // thermocouplePanel
-            // 
-            this.thermocouplePanel.Controls.Add(this.thermocoupletypeCombo);
-            this.thermocouplePanel.Controls.Add(this.label4);
-            this.thermocouplePanel.Location = new System.Drawing.Point(3, 3);
-            this.thermocouplePanel.Name = "thermocouplePanel";
-            this.thermocouplePanel.Size = new System.Drawing.Size(256, 24);
-            this.thermocouplePanel.TabIndex = 103;
-            this.thermocouplePanel.Visible = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-2, 4);
+            this.label4.Location = new System.Drawing.Point(6, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Thermocouple Type:";
-            // 
-            // rtdTypePanel
-            // 
-            this.rtdTypePanel.Controls.Add(this.rtdTypeCombo);
-            this.rtdTypePanel.Controls.Add(this.label1);
-            this.rtdTypePanel.Location = new System.Drawing.Point(3, 33);
-            this.rtdTypePanel.Name = "rtdTypePanel";
-            this.rtdTypePanel.Size = new System.Drawing.Size(256, 24);
-            this.rtdTypePanel.TabIndex = 104;
-            this.rtdTypePanel.Visible = false;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // rtdTypeCombo
             // 
             this.rtdTypeCombo.DisplayMember = "Value";
             this.rtdTypeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rtdTypeCombo.FormattingEnabled = true;
-            this.rtdTypeCombo.Location = new System.Drawing.Point(108, 1);
+            this.rtdTypeCombo.Location = new System.Drawing.Point(116, 46);
             this.rtdTypeCombo.Name = "rtdTypeCombo";
             this.rtdTypeCombo.Size = new System.Drawing.Size(148, 21);
             this.rtdTypeCombo.TabIndex = 0;
@@ -164,28 +127,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 4);
+            this.label1.Location = new System.Drawing.Point(25, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "RTD Type:";
-            // 
-            // rtdWireSetupPanel
-            // 
-            this.rtdWireSetupPanel.Controls.Add(this.rtdWireSetupCombo);
-            this.rtdWireSetupPanel.Controls.Add(this.label2);
-            this.rtdWireSetupPanel.Location = new System.Drawing.Point(3, 63);
-            this.rtdWireSetupPanel.Name = "rtdWireSetupPanel";
-            this.rtdWireSetupPanel.Size = new System.Drawing.Size(256, 24);
-            this.rtdWireSetupPanel.TabIndex = 105;
-            this.rtdWireSetupPanel.Visible = false;
             // 
             // rtdWireSetupCombo
             // 
             this.rtdWireSetupCombo.DisplayMember = "Value";
             this.rtdWireSetupCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rtdWireSetupCombo.FormattingEnabled = true;
-            this.rtdWireSetupCombo.Location = new System.Drawing.Point(108, 1);
+            this.rtdWireSetupCombo.Location = new System.Drawing.Point(116, 73);
             this.rtdWireSetupCombo.Name = "rtdWireSetupCombo";
             this.rtdWireSetupCombo.Size = new System.Drawing.Size(148, 21);
             this.rtdWireSetupCombo.TabIndex = 0;
@@ -195,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 5);
+            this.label2.Location = new System.Drawing.Point(15, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 0;
@@ -203,12 +156,16 @@
             // 
             // settingsBox
             // 
-            this.settingsBox.AutoSize = true;
             this.settingsBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.settingsBox.Controls.Add(this.additionalSettings);
-            this.settingsBox.Location = new System.Drawing.Point(12, 102);
+            this.settingsBox.Controls.Add(this.rtdWireSetupCombo);
+            this.settingsBox.Controls.Add(this.label2);
+            this.settingsBox.Controls.Add(this.thermocoupletypeCombo);
+            this.settingsBox.Controls.Add(this.label4);
+            this.settingsBox.Controls.Add(this.rtdTypeCombo);
+            this.settingsBox.Controls.Add(this.label1);
+            this.settingsBox.Location = new System.Drawing.Point(12, 406);
             this.settingsBox.Name = "settingsBox";
-            this.settingsBox.Size = new System.Drawing.Size(274, 128);
+            this.settingsBox.Size = new System.Drawing.Size(287, 112);
             this.settingsBox.TabIndex = 101;
             this.settingsBox.TabStop = false;
             this.settingsBox.Text = "Settings";
@@ -216,7 +173,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 241);
+            this.button1.Location = new System.Drawing.Point(13, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 23);
             this.button1.TabIndex = 103;
@@ -226,7 +183,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 271);
+            this.button2.Location = new System.Drawing.Point(13, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 23);
             this.button2.TabIndex = 104;
@@ -236,7 +193,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 300);
+            this.button3.Location = new System.Drawing.Point(13, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(171, 23);
             this.button3.TabIndex = 105;
@@ -246,28 +203,53 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(292, 225);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 167);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(185, 191);
+            this.richTextBox1.Size = new System.Drawing.Size(455, 143);
             this.richTextBox1.TabIndex = 106;
             this.richTextBox1.Text = "";
             // 
-            // phidgetInfoBox1
+            // button4
             // 
-            this.phidgetInfoBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.phidgetInfoBox1.Location = new System.Drawing.Point(12, 12);
-            this.phidgetInfoBox1.MinimumSize = new System.Drawing.Size(396, 84);
-            this.phidgetInfoBox1.Name = "phidgetInfoBox1";
-            this.phidgetInfoBox1.Size = new System.Drawing.Size(493, 84);
-            this.phidgetInfoBox1.TabIndex = 102;
+            this.button4.Location = new System.Drawing.Point(190, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(97, 23);
+            this.button4.TabIndex = 109;
+            this.button4.Text = "Clear Data";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(300, 138);
+            this.groupBox1.TabIndex = 110;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Logging";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(329, 67);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(126, 17);
+            this.checkBox1.TabIndex = 111;
+            this.checkBox1.Text = "Show Advanced Info";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dataIntervalTrk
             // 
             this.dataIntervalTrk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dataIntervalTrk.isIntValue = true;
             this.dataIntervalTrk.labelTxt = "Data Interval:";
-            this.dataIntervalTrk.Location = new System.Drawing.Point(7, 329);
+            this.dataIntervalTrk.Location = new System.Drawing.Point(302, 415);
             this.dataIntervalTrk.Maximum = -1D;
             this.dataIntervalTrk.maxTxt = "max";
             this.dataIntervalTrk.Minimum = -1D;
@@ -287,7 +269,7 @@
             this.changeTriggerTrk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.changeTriggerTrk.isIntValue = false;
             this.changeTriggerTrk.labelTxt = "Change Trigger:";
-            this.changeTriggerTrk.Location = new System.Drawing.Point(7, 381);
+            this.changeTriggerTrk.Location = new System.Drawing.Point(302, 458);
             this.changeTriggerTrk.Maximum = -1D;
             this.changeTriggerTrk.maxTxt = "max";
             this.changeTriggerTrk.Minimum = -1D;
@@ -302,50 +284,54 @@
             this.changeTriggerTrk.LogScroll += new System.EventHandler(this.changeTriggerCustom_LogScroll);
             this.changeTriggerTrk.LogMouseUp += new System.Windows.Forms.MouseEventHandler(this.changeTriggerCustom_LogMouseUp);
             // 
-            // button4
+            // phidgetInfoBox1
             // 
-            this.button4.Location = new System.Drawing.Point(189, 241);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 23);
-            this.button4.TabIndex = 109;
-            this.button4.Text = "Clear Data";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.phidgetInfoBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.phidgetInfoBox1.Location = new System.Drawing.Point(12, 316);
+            this.phidgetInfoBox1.MinimumSize = new System.Drawing.Size(396, 84);
+            this.phidgetInfoBox1.Name = "phidgetInfoBox1";
+            this.phidgetInfoBox1.Size = new System.Drawing.Size(493, 84);
+            this.phidgetInfoBox1.TabIndex = 102;
+            this.phidgetInfoBox1.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(13, 107);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(171, 23);
+            this.button5.TabIndex = 110;
+            this.button5.Text = "Save Data";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 595);
-            this.Controls.Add(this.button4);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(517, 589);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataIntervalTrk);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.changeTriggerTrk);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.phidgetInfoBox1);
             this.Controls.Add(this.settingsBox);
             this.Controls.Add(this.outputBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(533, 634);
-            this.MinimumSize = new System.Drawing.Size(533, 634);
+            this.MinimumSize = new System.Drawing.Size(533, 375);
             this.Name = "Form1";
             this.Text = "Temperature Sensor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.outputBox.ResumeLayout(false);
             this.outputBox.PerformLayout();
-            this.additionalSettings.ResumeLayout(false);
-            this.thermocouplePanel.ResumeLayout(false);
-            this.thermocouplePanel.PerformLayout();
-            this.rtdTypePanel.ResumeLayout(false);
-            this.rtdTypePanel.PerformLayout();
-            this.rtdWireSetupPanel.ResumeLayout(false);
-            this.rtdWireSetupPanel.PerformLayout();
             this.settingsBox.ResumeLayout(false);
             this.settingsBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,15 +344,11 @@
         private Phidget22.ExampleUtils.PhidgetInfoBox phidgetInfoBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tempTxt;
-        private System.Windows.Forms.Panel thermocouplePanel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel additionalSettings;
         private PhidgetsControlLibrary.CustomScroll changeTriggerTrk;
         private PhidgetsControlLibrary.CustomScroll dataIntervalTrk;
-        private System.Windows.Forms.Panel rtdTypePanel;
         private System.Windows.Forms.ComboBox rtdTypeCombo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel rtdWireSetupPanel;
         private System.Windows.Forms.ComboBox rtdWireSetupCombo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox settingsBox;
@@ -377,6 +359,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

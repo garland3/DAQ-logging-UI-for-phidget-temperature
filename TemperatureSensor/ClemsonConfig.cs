@@ -20,6 +20,13 @@ namespace TemperatureSensor_Example
                 return "Not Recording Data";
             }
         }
+
+        internal static void SetDesktopAsDefaultOutputFolder()
+        {
+            string temp = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            Console.WriteLine("GetFolderPath: {0}", temp);
+            outputFolder = temp;
+        }
     }
 
     class DataMeasurement
@@ -36,6 +43,11 @@ namespace TemperatureSensor_Example
         {
             this.temperature = temp;
             this.timestamp = t;
+        }
+
+        public string ToCSVFileLine()
+        {
+            return string.Format("{0},{1}", timestamp.ToString("s"), temperature.ToString());
         }
 
     }

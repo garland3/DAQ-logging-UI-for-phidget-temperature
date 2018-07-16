@@ -39,8 +39,11 @@ namespace TemperatureSensor_Example {
 			
 
 			errorBox = new ErrorEventBox(this);
+            this.Size = new Size(533, 375);
 
-			this.Size = this.MinimumSize;
+            this.Size = this.MinimumSize;
+
+            ClemsonConfig.SetDesktopAsDefaultOutputFolder();
 
 			temp = new TemperatureSensor();
 
@@ -81,6 +84,8 @@ namespace TemperatureSensor_Example {
             {
                 errorBox.addMessage("Error opening device: " + ex.Message);
             }
+
+            //settingsBox.Visible = false;
            
         }
 
@@ -148,26 +153,26 @@ namespace TemperatureSensor_Example {
 			changeTriggerTrk.Value = attachedDevice.TemperatureChangeTrigger;
 
 			//adjust any device specific settings
-			switch (temp.ChannelSubclass) {
-			case ChannelSubclass.TemperatureSensorThermocouple:
-				additionalSettings.Visible = true;
-				thermocouplePanel.Visible = true;
-				thermocoupletypeCombo.DataSource = typeof(ThermocoupleType).ToList();
-				thermocoupletypeCombo.SelectedIndex = 1; //set it to K-type by default
-				break;
-            case ChannelSubclass.TemperatureSensorRTD:
-                additionalSettings.Visible = true;
-                rtdTypePanel.Visible = true;
-                rtdTypeCombo.DataSource = typeof(RTDType).ToList();
-                rtdTypeCombo.SelectedIndex = 1; //set it to PT1000_3850 by default
-                rtdWireSetupPanel.Visible = true;
-                rtdWireSetupCombo.DataSource = typeof(RTDWireSetup).ToList();
-                rtdWireSetupCombo.SelectedIndex = 2; //set it to 4-wire by default
-                break;
-			default:
-				break;
-			}
-			settingsBox.Visible = true;
+			//switch (temp.ChannelSubclass) {
+			//case ChannelSubclass.TemperatureSensorThermocouple:
+			//	additionalSettings.Visible = true;
+			//	thermocouplePanel.Visible = true;
+			//	thermocoupletypeCombo.DataSource = typeof(ThermocoupleType).ToList();
+			//	thermocoupletypeCombo.SelectedIndex = 1; //set it to K-type by default
+			//	break;
+   //         case ChannelSubclass.TemperatureSensorRTD:
+   //             additionalSettings.Visible = true;
+   //             rtdTypePanel.Visible = true;
+   //             rtdTypeCombo.DataSource = typeof(RTDType).ToList();
+   //             rtdTypeCombo.SelectedIndex = 1; //set it to PT1000_3850 by default
+   //             rtdWireSetupPanel.Visible = true;
+   //             rtdWireSetupCombo.DataSource = typeof(RTDWireSetup).ToList();
+   //             rtdWireSetupCombo.SelectedIndex = 2; //set it to 4-wire by default
+   //             break;
+			//default:
+			//	break;
+			//}
+			//settingsBox.Visible = true;
 			outputBox.Visible = true;
 		}
 
@@ -178,10 +183,10 @@ namespace TemperatureSensor_Example {
 
             settingsBox.Visible = false;
 			outputBox.Visible = false;
-			thermocouplePanel.Visible = false;
-            rtdTypePanel.Visible = false;
-            rtdWireSetupPanel.Visible = false;
-            additionalSettings.Visible = false;
+			//thermocouplePanel.Visible = false;
+   //         rtdTypePanel.Visible = false;
+   //         rtdWireSetupPanel.Visible = false;
+   //         additionalSettings.Visible = false;
 		}
 
 		void temp_error(object sender, Phidget22.Events.ErrorEventArgs e) {
@@ -272,9 +277,9 @@ namespace TemperatureSensor_Example {
         {
             ClemsonConfig.isRecording = false;
             ShowMessageToOutputBox("Stopped Recording Data");
-            ShowMessageToOutputBox(ClemsonConfig.DisplayRecordingState());
+           // ShowMessageToOutputBox(ClemsonConfig.DisplayRecordingState());
 
-            SaveDataToFile();
+          
         }
 
         private void SaveDataToFile()
@@ -282,18 +287,70 @@ namespace TemperatureSensor_Example {
             int interation = 1;
             string outname = "temperature_data"+DateTime.Now.ToString("HH_mm_ss")+"_ " + interation + ".csv";
             string fullpath = Path.Combine(ClemsonConfig.outputFolder, outname);
-           while( File.Exists(fullpath))
+            
+            while ( File.Exists(fullpath))
             {
                 outname = "temperature_data" + interation + ".csv";
                 fullpath = Path.Combine(ClemsonConfig.outputFolder, outname);
                 interation++;
+                //ShowMessageToOutputBox("File name is: "+ outname);
             }
+            ShowMessageToOutputBox("Folder: " + ClemsonConfig.outputFolder);
+            ShowMessageToOutputBox("File : " + outname);
+
+            SaveDataToCSV(fullpath);
+        }
+
+        private void SaveDataToCSV(string fullpath)
+        {
+            //before your loop
+            var csv = new StringBuilder();
+
+            string first = "TimeStamp";
+            string second = "Temperature in C";
+            var newLine = string.Format("{0},{1}", first, second);
+            csv.AppendLine(newLine);
+
+            //in your loop
+            foreach (DataMeasurement measure in measurementList){
+             
+                csv.AppendLine(measure.ToCSVFileLine());
+            }
+           
+
+            //after your loop
+            File.WriteAllText(fullpath, csv.ToString());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.measurementList.Clear();
             ShowMessageToOutputBox("Cleared Any Recorded Data");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            phidgetInfoBox1.Visible = checkBox1.Checked;
+            settingsBox.Visible = checkBox1.Checked;
+            //additionalSettings.Visible = checkBox1.Checked;
+            if (checkBox1.Checked == false)
+                this.Size = new Size(533, 375);
+            else
+                this.Size = new Size(533, 700);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(ClemsonConfig.isRecording == true)
+            {
+                ClemsonConfig.isRecording = false;
+            }
+            SaveDataToFile();
         }
     }
 }
