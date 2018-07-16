@@ -10,6 +10,9 @@ The application is meant to be very simple so that freshman can record data temp
 This application is a modification of the example program that you can download from phidget.
 ## How to use
 * Install the program
+** Go the NSIS folder
+** Download the newest version
+** You might get a nasty security warning from windows when you install it. If you don't think it is safe, then search through the source code here on github. 
 * Plug in a Phidget temperature device
 * Run the program
 * Click 'Start Recording Data' to log temperature measurements every 0.5 seconds
