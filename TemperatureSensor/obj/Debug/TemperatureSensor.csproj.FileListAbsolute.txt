@@ -1,0 +1,13 @@
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\Debug\TemperatureSensor_Example.exe
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\Debug\TemperatureSensor_Example.pdb
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor.csprojResolveAssemblyReference.cache
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.External_Resources.CustomScroll.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.ErrorEventBox.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.LocationData.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.PhidgetInfoBox.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.Form1.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.Properties.Resources.resources
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor.csproj.GenerateResource.Cache
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor.csproj.CoreCompileInputs.cache
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.exe
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.pdb
