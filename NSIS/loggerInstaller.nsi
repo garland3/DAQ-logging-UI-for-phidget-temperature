@@ -117,6 +117,8 @@ Section "Main Program" SEC01
 	
 	FILE "..\TemperatureSensor\bin\Release\${EXE_FILE}"
 	FILE "..\TemperatureSensor\bin\Release\Phidget22.NET.dll"	
+	FILE "..\TemperatureSensor\DLL\phidget22.dll"	
+	
 
 	;create desktop shortcut
 	CreateShortCut "$DESKTOP\${PRODUCT_NAME}.lnk" "$INSTDIR\${EXE_FILE}" ""
@@ -158,6 +160,7 @@ Section "Uninstall"
 	
 	Delete "$INSTDIR\${EXE_FILE}" 
 	Delete "$INSTDIR\Phidget22.NET.dll" 
+	Delete "$INSTDIR\phidget22.dll" 
 
 	Delete "$INSTDIR\Uninstall.exe"
 	RMDir "$INSTDIR"
