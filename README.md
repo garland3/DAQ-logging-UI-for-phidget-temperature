@@ -38,4 +38,3 @@ This app was developed with
 * Bugs exist. Help squash them by reporting an issue [Report an issue here.](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/issues)
 * Thought of an amazing addition to the software that you would like? [Click here](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/issues) to make a new feature request. Your issue should have the tag, *Enhancement*.
 
-Use the bug reporting link above to create a new issue with tag = enhancement. 
