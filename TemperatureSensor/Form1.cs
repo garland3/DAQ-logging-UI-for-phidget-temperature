@@ -22,6 +22,10 @@ namespace TemperatureSensor_Example {
 
         List<DataMeasurement> measurementList = new List<DataMeasurement>();
 
+        private DateTime startRecordingDateTime;
+
+        private int samplePeriod = 500; // in milli-seconds
+
 		public Form1() {
 			open = new CommandLineOpen(this);
             cleaner = new formCleaner(this);
@@ -97,8 +101,8 @@ namespace TemperatureSensor_Example {
             // ---------------
             // Set  the intervalu rate. 
             // ---------------
-            temp.DataInterval = 500;
-            ShowMessageToOutputBox("Update rate 500 ms");
+            temp.DataInterval = samplePeriod; // ms
+            //ShowMessageToOutputBox("Update rate 500 ms");
             temp.TemperatureChangeTrigger = 0; // this will cause the update temperature to fire every DataInterval
 
             // ShowMessageToOutputBox("Min interval");
@@ -269,6 +273,13 @@ namespace TemperatureSensor_Example {
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Clear any old data before recording new data. 
+            // Button 4 is the clear data button. 
+            button4_Click(null, null);
+
+            startRecordingDateTime = DateTime.Now;
+
+
             ClemsonConfig.isRecording = true;
             ShowMessageToOutputBox(ClemsonConfig.DisplayRecordingState());
         }
@@ -307,14 +318,15 @@ namespace TemperatureSensor_Example {
             var csv = new StringBuilder();
 
             string first = "TimeStamp";
-            string second = "Temperature in C";
-            var newLine = string.Format("{0},{1}", first, second);
+            string second = "Delta T in seconds";
+            string third = "Temperature in C";
+            var newLine = string.Format("{0},{1},{2}", first, second,third);
             csv.AppendLine(newLine);
 
             //in your loop
             foreach (DataMeasurement measure in measurementList){
              
-                csv.AppendLine(measure.ToCSVFileLine());
+                csv.AppendLine(measure.ToCSVFileLine(startRecordingDateTime));
             }
            
 
@@ -346,11 +358,29 @@ namespace TemperatureSensor_Example {
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(ClemsonConfig.isRecording == true)
+            if (ClemsonConfig.isRecording == true)
             {
                 ClemsonConfig.isRecording = false;
             }
-            SaveDataToFile();
+
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "csv file|*.csv";
+            saveFileDialog1.Title = "Save an Data File";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                
+                SaveDataToFile(saveFileDialog1.FileName);
+            }
+
+               
+           
+        }
+
+        private void SaveDataToFile(string fileName)
+        {
+            SaveDataToCSV(fileName);
         }
     }
 }

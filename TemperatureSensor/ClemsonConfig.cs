@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -50,5 +51,14 @@ namespace TemperatureSensor_Example
             return string.Format("{0},{1}", timestamp.ToString("s"), temperature.ToString());
         }
 
+        internal string ToCSVFileLine(DateTime startRecordingDateTime)
+        {
+            CultureInfo ci = CultureInfo.InvariantCulture;
+            TimeSpan t = this.timestamp.Subtract(startRecordingDateTime);
+            return string.Format("{0},{2},{1}",
+                timestamp.ToString("M/dd/yyy hh:mm:ss.FFF", ci),
+                temperature.ToString(),
+                t.TotalSeconds);
+        }
     }
 }
