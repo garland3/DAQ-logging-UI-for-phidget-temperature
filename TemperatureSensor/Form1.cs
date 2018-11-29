@@ -24,7 +24,7 @@ namespace TemperatureSensor_Example {
 
         private DateTime startRecordingDateTime;
 
-        private int samplePeriod = 500; // in milli-seconds
+        private int samplePeriod = 5000; // in milli-seconds
 
 		public Form1() {
 			open = new CommandLineOpen(this);
@@ -318,8 +318,8 @@ namespace TemperatureSensor_Example {
             var csv = new StringBuilder();
 
             string first = "TimeStamp";
-            string second = "Delta T in seconds";
-            string third = "Temperature in C";
+            string second = "Elapsed time (t) [s]";
+            string third = "Temperature (T) [C]";
             var newLine = string.Format("{0},{1},{2}", first, second,third);
             csv.AppendLine(newLine);
 
@@ -381,6 +381,16 @@ namespace TemperatureSensor_Example {
         private void SaveDataToFile(string fileName)
         {
             SaveDataToCSV(fileName);
+        }
+
+        private void numericUpDown1_Leave(object sender, EventArgs e)
+        {
+            double tempLocal =  1000.0 / Convert.ToDouble(numericUpDown1.Value);
+            int updateInterval = (int)Math.Round(tempLocal);
+            
+        // temp.DataInterval is in milliseconds
+            temp.DataInterval = updateInterval; // ms
+            ShowMessageToOutputBox("Update interval in milliseconds: "+ temp.DataInterval);
         }
     }
 }
