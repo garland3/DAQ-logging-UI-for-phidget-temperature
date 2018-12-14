@@ -3,7 +3,7 @@
 This is a simple data logger application that is meant to work with a phidget temperature sensor. It might be used at Clemson University in the General Engineering department.   
 The application is meant to be very simple so that freshman can record data temperatures in large engineering classes.  
   
-![UI](https://raw.githubusercontent.com/garland3/DAQ-logging-UI-for-phidget-temperature/master/Images/Version1.01.PNG "Logo Title Text 1")
+![UI](https://raw.githubusercontent.com/garland3/DAQ-logging-UI-for-phidget-temperature/master/Images/Version1.02.PNG "Logo Title Text 1")
   
    
 ## Overview
@@ -23,7 +23,7 @@ This application is a modification of the example program that you can download 
 
 * Plug in a Phidget temperature device
 * Run the program
-* Click 'Start Recording Data' to log temperature measurements every 0.5 seconds
+* Click 'Start Recording Data' to log temperature measurements every 5 seconds
 * Click 'Stop Recording Data' to stop logging
 * Click 'Save Data' to save the data to a csv file. 
     * The csv file has three columns (Timestamp, delta T (delta Time) and temperature). 
