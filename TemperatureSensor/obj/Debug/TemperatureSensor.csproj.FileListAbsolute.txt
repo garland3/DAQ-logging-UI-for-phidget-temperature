@@ -1,5 +1,4 @@
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor.csprojResolveAssemblyReference.cache
-C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.External_Resources.CustomScroll.resources
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.ErrorEventBox.resources
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.LocationData.resources
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidget22.ExampleUtils.PhidgetInfoBox.resources
@@ -11,3 +10,4 @@ C:\Users\apg\git\Phidget22Temp\TemperatureSensor\Debug\Phidgets_temp_data_logger
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\Debug\Phidgets_temp_data_logger.pdb
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidgets_temp_data_logger.exe
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Phidgets_temp_data_logger.pdb
+C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.NewResources.CustomScroll.resources
