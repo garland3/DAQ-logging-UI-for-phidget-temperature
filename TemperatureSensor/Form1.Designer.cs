@@ -47,13 +47,13 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button5 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataIntervalTrk = new PhidgetsControlLibrary.CustomScroll();
             this.changeTriggerTrk = new PhidgetsControlLibrary.CustomScroll();
             this.phidgetInfoBox1 = new Phidget22.ExampleUtils.PhidgetInfoBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
             this.outputBox.SuspendLayout();
             this.settingsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -238,6 +238,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Logging";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(145, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 112;
+            this.label5.Text = "Sample rate in Hz";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numericUpDown1.Location = new System.Drawing.Point(18, 107);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 111;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.numericUpDown1.Leave += new System.EventHandler(this.numericUpDown1_Leave);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(18, 77);
@@ -265,7 +293,7 @@
             this.dataIntervalTrk.isIntValue = true;
             this.dataIntervalTrk.labelTxt = "Data Interval:";
             this.dataIntervalTrk.Location = new System.Drawing.Point(302, 415);
-            this.dataIntervalTrk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataIntervalTrk.Margin = new System.Windows.Forms.Padding(6);
             this.dataIntervalTrk.Maximum = -1D;
             this.dataIntervalTrk.maxTxt = "max";
             this.dataIntervalTrk.Minimum = -1D;
@@ -286,7 +314,7 @@
             this.changeTriggerTrk.isIntValue = false;
             this.changeTriggerTrk.labelTxt = "Change Trigger:";
             this.changeTriggerTrk.Location = new System.Drawing.Point(302, 458);
-            this.changeTriggerTrk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.changeTriggerTrk.Margin = new System.Windows.Forms.Padding(6);
             this.changeTriggerTrk.Maximum = -1D;
             this.changeTriggerTrk.maxTxt = "max";
             this.changeTriggerTrk.Minimum = -1D;
@@ -306,40 +334,12 @@
             this.phidgetInfoBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.phidgetInfoBox1.Location = new System.Drawing.Point(12, 316);
-            this.phidgetInfoBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.phidgetInfoBox1.Margin = new System.Windows.Forms.Padding(6);
             this.phidgetInfoBox1.MinimumSize = new System.Drawing.Size(396, 84);
             this.phidgetInfoBox1.Name = "phidgetInfoBox1";
             this.phidgetInfoBox1.Size = new System.Drawing.Size(493, 84);
             this.phidgetInfoBox1.TabIndex = 102;
             this.phidgetInfoBox1.Visible = false;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(18, 107);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 111;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            65536});
-            this.numericUpDown1.Leave += new System.EventHandler(this.numericUpDown1_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(145, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "Sample rate in Hz";
             // 
             // Form1
             // 
