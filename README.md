@@ -36,6 +36,9 @@ This app was developed with
 * Visual Studio 2017
 * NSIS Installer
 
+###
+* Install Phidget22.NET from NuGet to get fix any reference problems. 
+
 ## Found a problem?
 * Bugs exist. Help squash them by reporting an issue [Report an issue here.](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/issues)
 * Thought of an amazing addition to the software that you would like? [Click here](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/issues) to make a new feature request. Your issue should have the tag, *Enhancement*.

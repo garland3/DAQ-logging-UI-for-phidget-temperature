@@ -109,7 +109,7 @@ namespace Phidget22.ExampleUtils
 			this.Controls.Add(this.errorCountLbl);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.logBox);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			//this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "ErrorEventBox";

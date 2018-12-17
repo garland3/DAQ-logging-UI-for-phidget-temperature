@@ -76,7 +76,7 @@ namespace Phidget22.ExampleUtils
             // locationButton
             // 
             this.locationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.locationButton.Image = ((System.Drawing.Image)(resources.GetObject("locationButton.Image")));
+            //this.locationButton.Image = ((System.Drawing.Image)(resources.GetObject("location")));
             this.locationButton.Location = new System.Drawing.Point(279, 42);
             this.locationButton.Name = "locationButton";
             this.locationButton.Size = new System.Drawing.Size(22, 23);

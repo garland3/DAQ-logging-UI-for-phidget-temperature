@@ -263,7 +263,9 @@
             this.textBox1.Size = new System.Drawing.Size(438, 41);
             this.textBox1.TabIndex = 19;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.Text = @"These parameters control what gets opened.  You can set these before calling 
+open in your code to ensure you uniquely specify exactly what you want to work with.
+You can mouse over each for more information." ;//resources.GetString("textBox1.Text");
             // 
             // LocationData
             // 
@@ -290,7 +292,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+          //  this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LocationData";
             this.Text = "Addressing Information";
             this.Load += new System.EventHandler(this.LocationData_Load);
