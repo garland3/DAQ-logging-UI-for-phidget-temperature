@@ -10,3 +10,17 @@ C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\Tem
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.ErrorEventBox.resources
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.LocationData.resources
 C:\Users\apg\git\Phidget22Temp\TemperatureSensor\TemperatureSensor\obj\Debug\TemperatureSensor_Example.PhidgetInfoBox.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor.csprojAssemblyReference.cache
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.CustomScroll.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.ErrorEventBox.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.Form1.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.LocationData.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.PhidgetInfoBox.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor_Example.Properties.Resources.resources
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor.csproj.GenerateResource.cache
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor.csproj.CoreCompileInputs.cache
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\Debug\Phidgets_temp_data_logger.exe
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\Debug\Phidgets_temp_data_logger.pdb
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\TemperatureSensor.csproj.CopyComplete
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\Phidgets_temp_data_logger.exe
+C:\Users\garla\git\DAQ-logging-UI-for-phidget-temperature\TemperatureSensor\obj\Debug\Phidgets_temp_data_logger.pdb

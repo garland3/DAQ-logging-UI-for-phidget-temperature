@@ -99,6 +99,11 @@
             <remarks>The maximum value that <c>DataInterval</c> can be set to.
             </remarks>
         </member>
+        <member name="P:Phidget22.Accelerometer.Precision">
+            <summary> The sensor precision value </summary>
+            <remarks>Selects between high/low precision sensing chips.
+            </remarks>
+        </member>
         <member name="P:Phidget22.Accelerometer.Timestamp">
             <summary> The timestamp value </summary>
             <remarks>The most recent timestamp value that the channel has reported. This is an extremely accurate time
@@ -2523,6 +2528,11 @@
             <remarks>The maximum value that <c>DataInterval</c> can be set to.
             </remarks>
         </member>
+        <member name="P:Phidget22.Gyroscope.Precision">
+            <summary> The sensor precision value </summary>
+            <remarks>Selects between high/low precision sensing chips.
+            </remarks>
+        </member>
         <member name="P:Phidget22.Gyroscope.Timestamp">
             <summary> The timestamp value </summary>
             <remarks>The most recent timestamp value that the channel has reported. This is an extremely accurate time
@@ -4680,6 +4690,11 @@
             <remarks>The maximum value that <c>DataInterval</c> can be set to.
             </remarks>
         </member>
+        <member name="P:Phidget22.Spatial.Precision">
+            <summary> The sensor precision value </summary>
+            <remarks>Selects between high/low precision sensing chips.
+            </remarks>
+        </member>
         <member name="M:Phidget22.Spatial.SetMagnetometerCorrectionParameters(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
             <summary> </summary>
             <remarks>Calibrate your device for the environment it will be used in.
@@ -5700,6 +5715,10 @@
         <member name="T:Phidget22.Net">
             <summary> Net class definition </summary>
         </member>
+        <member name="M:Phidget22.Net.GetServerAddressList(System.String,System.Int32)">
+            <summary> </summary>
+            <remarks>Returns addresses for a server</remarks>
+        </member>
         <member name="M:Phidget22.Net.GetKeyValue_String(System.IntPtr,System.String,System.String)">
             <summary> Gets a string from the server added kv </summary>
         </member>
@@ -6191,6 +6210,13 @@
             Fails if the channel is not connected to a Phidget network server.
             </remarks>
         </member>
+        <member name="P:Phidget22.Phidget.ServerUniqueName">
+            <summary> The unique name of the server </summary>
+            <remarks>Gets the unique name for the server the channel is attached to, if any. This is either a unique
+            mDNS name, or the name specified in addServer
+            Fails if the channel is not connected to a Phidget network server.
+            </remarks>
+        </member>
         <member name="M:Phidget22.Phidget.Close">
             <summary> </summary>
             <remarks>Closes a Phidget channel that has been opened.<c>Close()</c> will release the channel on the
@@ -6388,7 +6414,7 @@
             <summary> No Such Entity </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.Timeout">
-            <summary> Timed Out </summary>
+            <summary> Timed Out. This can happen for a number of common reasons:Check that the Phidget you are trying to open is plugged in, and that the addressing parameters have been specified correctly.Check that the Phidget is not already open in another program, such as the Phidget Control Panel, or another program you are developing.If your Phidget has a plug or terminal block for external power, ensure it is plugged in and powered.If you are using remote Phidgets, ensure that your computer can access the remote Phidgets using the Phidget Control Panel.If you are using remote Phidgets, ensure you have enabled Server Discovery or added the server corresponding to the Phidget you are trying to open.If you are using Network Server Discovery, try extending the timeout to allow more time for the server to be discovered. </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.KeepAlive">
             <summary> Keep Alive Failure </summary>
@@ -6409,7 +6435,7 @@
             <summary> Address Issue </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.Busy">
-            <summary> Resource Busy </summary>
+            <summary> Resource Busy. This means the Phidget you are trying to open is already open elsewhere.Check that the Phidget is not already open in another program, such as the Phidget Control Panel, or another program you are developing.Check that the addressing parameters have been specified correctly. </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.Exists">
             <summary> Object Exists </summary>
@@ -6445,13 +6471,13 @@
             <summary> Operation Not Supported </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.InvalidArgument">
-            <summary> Invalid Argument </summary>
+            <summary> Invalid Argument. One or more of the parameters passed to the method or property is not accepted by the channel in its current configuration. </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.TryAgain">
             <summary> Try again </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.NotEmpty">
-            <summary> No Empty </summary>
+            <summary> Not Empty </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.Unexpected">
             <summary> Unexpected Error </summary>
@@ -6490,7 +6516,7 @@
             <summary> Unknown or Invalid Value </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.NotAttached">
-            <summary> Device not Attached </summary>
+            <summary> Device Not Attached. This can happen for a number of common reasons. Be sure you are opening the channel before trying to use it. If you are opening the channel, the program may not be waiting for the channel to be attached. If possible use the version of Open that takes a timeout parameter. Otherwise, be sure to check the Attached property of the channel before trying to use it. </summary>
         </member>
         <member name="F:Phidget22.ErrorCode.InvalidPacket">
             <summary> Invalid or Unexpected Packet </summary>
@@ -6515,13 +6541,13 @@
             </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.BadVersion">
-            <summary> Client and Server protocol versions don't match. </summary>
+            <summary> Client and Server protocol versions don't match. Ensure that both sides are using the same release of phidget22. </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.Busy">
-            <summary> Phidget is in use. </summary>
+            <summary> Phidget in Use </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.Network">
-            <summary> Networking communication error. </summary>
+            <summary> Network Error </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.Dispatch">
             <summary> An error occured dispatching a command or event. </summary>
@@ -6539,7 +6565,7 @@
             <summary> One or more packets were lost. </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.WrapAround">
-            <summary> A variable has wrapped around. </summary>
+            <summary> Variable has wrapped around. </summary>
         </member>
         <member name="F:Phidget22.ErrorEventCode.OverTemperature">
             <summary> Over-temperature condition detected. </summary>
@@ -6768,7 +6794,7 @@
             <summary> Joystick </summary>
         </member>
         <member name="F:Phidget22.DeviceID.PN_HUB0000">
-            <summary> Phidget Hub with 6 ports </summary>
+            <summary> Phidget USB VINT Hub with 6 ports </summary>
         </member>
         <member name="F:Phidget22.DeviceID.PN_HUB0004">
             <summary> Phidget SPI VINT Hub with 6 ports </summary>
@@ -6889,6 +6915,9 @@
         </member>
         <member name="F:Phidget22.DeviceID.PN_STC1001">
             <summary> Bipolar Stepper Motor SmallController </summary>
+        </member>
+        <member name="F:Phidget22.DeviceID.PN_HUB5000">
+            <summary> Phidget Network Hub with 6 ports </summary>
         </member>
         <member name="T:Phidget22.LogLevel">
             <summary>Phidget logging level
@@ -7094,6 +7123,9 @@
         <member name="F:Phidget22.ChannelClass.Dictionary">
             <summary> Dictionary </summary>
         </member>
+        <member name="F:Phidget22.ChannelClass.CurrentOutput">
+            <summary> Current output channel </summary>
+        </member>
         <member name="T:Phidget22.ChannelSubclass">
             <summary>Phidget channel sub class
             </summary>
@@ -7130,9 +7162,6 @@
         </member>
         <member name="F:Phidget22.ChannelSubclass.EncoderModeSettable">
             <summary> Encoder IO mode settable </summary>
-        </member>
-        <member name="F:Phidget22.ChannelSubclass.RCServoEmbedded">
-            <summary> RC Servo Embedded </summary>
         </member>
         <member name="T:Phidget22.MeshMode">
             <summary>Phidget mesh mode
@@ -7192,6 +7221,19 @@
         </member>
         <member name="F:Phidget22.FanMode.Auto">
             <summary> The fan will be automatically controlled based on temperature. </summary>
+        </member>
+        <member name="T:Phidget22.SpatialPrecision">
+            <summary>Controls how data from primary and backup sptial sensing chips are used.
+            </summary>
+        </member>
+        <member name="F:Phidget22.SpatialPrecision.Hybrid">
+            <summary> High precision sensor is used when possible, fallback to low precision sensor. </summary>
+        </member>
+        <member name="F:Phidget22.SpatialPrecision.High">
+            <summary> High precision sensor is always used. </summary>
+        </member>
+        <member name="F:Phidget22.SpatialPrecision.Low">
+            <summary> Low precision sensor is always used. </summary>
         </member>
         <member name="T:Phidget22.Unit">
             <summary>Analog sensor units. These correspond to the types of quantities that can be measured by Phidget
