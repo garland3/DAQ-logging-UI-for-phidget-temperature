@@ -26,7 +26,7 @@ This application is a modification of the example program that you can download 
 * Click 'Start Recording Data' to log temperature measurements every 5 seconds
 * Click 'Stop Recording Data' to stop logging
 * Click 'Save Data' to save the data to a csv file. 
-    * The csv file has three columns (Timestamp, delta T (delta Time) and temperature). 
+    * The csv file has three columns (Timestamp, Elapsed time [s], and Temperature [C]). 
     * The delta T is the difference in time from when you clicked "Start Recording" until the measurements was made. The units are seconds. 
     * If you view the csv file in Microsft Excel, then the Timestamp will not show correct. If you open the .csv file in a text editor (like notepad), then you can see the whole time stamp information. 
     * The update interval is 0.20 Hz (5 s) by default. Depending on your computer, a slightly delay may cause the update-interval to be slightly larger. You can see this when you compare the time-stamps. 
