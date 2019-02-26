@@ -10,14 +10,14 @@ The application is meant to be very simple so that freshman can record data temp
 This application is a modification of the example program that you can download from phidget.
 
 ## Installation
-* Download the Phidget drivers from the phidget website [www.phidgets.com](https://www.phidgets.com/docs/OS_-_Windows#Getting_started_with_Windows). In the Quick Downloads section, you need to download and install the 64-bit Installer Download.   
+* Download the Phidget drivers from the phidget website [www.phidgets.com](https://www.phidgets.com/docs/OS_-_Windows#Getting_started_with_Windows). In the Install section, you need to download and install the 64-bit Installer Download.   
   
 ![UI](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/blob/master/phidgetDriverDownload.png)  
   
 * In the NSIS folder of this repository, [NSIS](./NSIS), find the newest version of the DAQ software and download it. 
 * Chrome might block download this software since it is not used often. But you can override this block.
 * Run the installer. 
-* You might get a nasty security warning from windows when you install it. If you don't think it is safe, then search through the source code here on github until you are satisfied. Again, you can override this security block and run the installer anyway. 
+* You might get a nasty security warning from windows when you install it. Again, you can override this security block and run the installer anyway. If you don't think it is safe, then search through the source code here on github until you are satisfied.
 
 ## How to use
 
@@ -28,8 +28,8 @@ This application is a modification of the example program that you can download 
 * Click 'Save Data' to save the data to a csv file. 
     * The csv file has three columns (Timestamp, delta T (delta Time) and temperature). 
     * The delta T is the difference in time from when you clicked "Start Recording" until the measurements was made. The units are seconds. 
-    * If you view the csv file in Microsft Excel, then the Timestamp will not show correct. If you open the .csv file in a text editor (like notepad), then youc an see the whole time stamp information. 
-    * The update interval is 500 ms by default. Depending on your computer, a slightly delay may cause the update-interval to be slightly larger. You can see this when you compare the time-stamps. 
+    * If you view the csv file in Microsft Excel, then the Timestamp will not show correct. If you open the .csv file in a text editor (like notepad), then you can see the whole time stamp information. 
+    * The update interval is 0.20 Hz (5 s) by default. Depending on your computer, a slightly delay may cause the update-interval to be slightly larger. You can see this when you compare the time-stamps. 
 * Click 'Clear Data' to clear any recorded data. 
 ## Development
 This app was developed with 
