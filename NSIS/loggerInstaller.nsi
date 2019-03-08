@@ -21,7 +21,7 @@
 ;Name and file
 
 !define PRODUCT_NAME "Phidget_Temperature_Logger"
-!define PRODUCT_VERSION "1.03"
+!define PRODUCT_VERSION "1.02"
 !define PRODUCT_PUBLISHER "Clemson University (open source development)"
 !define PRODUCT_WEB_SITE "https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature"
 

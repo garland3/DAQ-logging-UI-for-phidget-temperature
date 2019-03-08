@@ -10,14 +10,15 @@ The application is meant to be very simple so that freshman can record data temp
 This application is a modification of the example program that you can download from phidget.
 
 ## Installation
-* Download the Phidget drivers from the phidget website [www.phidgets.com](https://www.phidgets.com/docs/OS_-_Windows#Getting_started_with_Windows). In the Install section, you need to download and install the 64-bit Installer Download.   
-  
-![UI](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/blob/master/phidgetDriverDownload.png)  
-  
-* In the NSIS folder of this repository, [NSIS](./NSIS), find the newest version of the DAQ software and download it. 
-* Chrome might block download this software since it is not used often. But you can override this block.
-* Run the installer. 
-* You might get a nasty security warning from windows when you install it. Again, you can override this security block and run the installer anyway. If you don't think it is safe, then search through the source code here on github until you are satisfied.
+You need to install two things to collect data with the phidgets.
+1. Phidget Drivers
+  1. Download the Phidget drivers from the phidget website [www.phidgets.com](https://www.phidgets.com/docs/OS_-_Windows#Getting_started_with_Windows). In the Install section, you need to download and install the 64-bit Installer Download. See the screenshot below for reference.
+  1. ![UI](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/blob/master/phidgetDriverDownload.png)  
+1. Phidget Data Logging Software
+  1. In the NSIS folder of this repository, [NSIS](./NSIS), find the newest version of the DAQ software and download it. 
+  * Chrome might block download this software since it is not used often. But you can override this block.
+  1. Run the installer. 
+  * You might get a nasty security warning from windows when you install it. Again, you can override this security block and run the installer anyway. If you don't think it is safe, then search through the source code here on github until you are satisfied.
 
 ## How to use
 
