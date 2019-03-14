@@ -13,7 +13,7 @@ This application is a modification of the example program that you can download 
 You need to install two things to collect data with the phidgets.
 1. Phidget Drivers
    1. Download the Phidget drivers from the phidget website [www.phidgets.com](https://www.phidgets.com/docs/OS_-_Windows#Getting_started_with_Windows). In the Install section, you need to download and install the 64-bit Installer Download. See the screenshot below for reference.
-   1. ![UI](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/blob/master/phidgetDriverDownload.png)  
+   1. ![UI](https://github.com/garland3/DAQ-logging-UI-for-phidget-temperature/blob/master/phidgetDriverDownload1.png)  
 1. Phidget Data Logging Software
    1. In the NSIS folder of this repository, [NSIS](./NSIS), find the newest version of the DAQ software and download it. 
    1. Chrome might block download this software since it is not used often. But you can override this block.
