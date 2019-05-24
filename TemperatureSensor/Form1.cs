@@ -199,7 +199,17 @@ namespace TemperatureSensor_Example {
 
 		void temp_change(object sender, Phidget22.Events.TemperatureSensorTemperatureChangeEventArgs e) {
 			tempTxt.Text = e.Temperature.ToString() + "°C";
-		}
+            DateTime timestamp = DateTime.Now;
+            TimeSpan t = timestamp.Subtract(startRecordingDateTime);
+            if (ClemsonConfig.isRecording)
+            {
+                timeTxt.Text = t.TotalSeconds.ToString() + " s";
+            }
+            else
+            {
+                timeTxt.Text = "0 s";
+            }
+        }
 
 		private void thermocoupletypeCombo_SelectedIndexChanged(object sender, EventArgs e) {
 			try {
@@ -391,6 +401,21 @@ namespace TemperatureSensor_Example {
         // temp.DataInterval is in milliseconds
             temp.DataInterval = updateInterval; // ms
             ShowMessageToOutputBox("Update interval in milliseconds: "+ temp.DataInterval);
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TempTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

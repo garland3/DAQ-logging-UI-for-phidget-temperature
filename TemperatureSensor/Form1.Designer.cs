@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.outputBox = new System.Windows.Forms.GroupBox();
+            this.timeTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tempTxt = new System.Windows.Forms.TextBox();
             this.thermocoupletypeCombo = new System.Windows.Forms.ComboBox();
@@ -63,15 +65,39 @@
             // outputBox
             // 
             this.outputBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputBox.Controls.Add(this.timeTxt);
+            this.outputBox.Controls.Add(this.label6);
             this.outputBox.Controls.Add(this.label3);
             this.outputBox.Controls.Add(this.tempTxt);
             this.outputBox.Location = new System.Drawing.Point(329, 15);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(176, 39);
+            this.outputBox.Size = new System.Drawing.Size(176, 50);
             this.outputBox.TabIndex = 98;
             this.outputBox.TabStop = false;
             this.outputBox.Text = "Data";
             this.outputBox.Visible = false;
+            // 
+            // timeTxt
+            // 
+            this.timeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.timeTxt.Location = new System.Drawing.Point(82, 34);
+            this.timeTxt.Name = "timeTxt";
+            this.timeTxt.ReadOnly = true;
+            this.timeTxt.Size = new System.Drawing.Size(75, 13);
+            this.timeTxt.TabIndex = 3;
+            this.timeTxt.TabStop = false;
+            this.timeTxt.Text = "???";
+            this.timeTxt.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Elapsed Time:";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // label3
             // 
@@ -92,6 +118,7 @@
             this.tempTxt.TabIndex = 0;
             this.tempTxt.TabStop = false;
             this.tempTxt.Text = "???";
+            this.tempTxt.TextChanged += new System.EventHandler(this.TempTxt_TextChanged);
             // 
             // thermocoupletypeCombo
             // 
@@ -279,7 +306,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(329, 67);
+            this.checkBox1.Location = new System.Drawing.Point(329, 83);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(126, 17);
             this.checkBox1.TabIndex = 111;
@@ -403,6 +430,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox timeTxt;
     }
 }
 
